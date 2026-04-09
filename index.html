@@ -75,6 +75,79 @@
         overflow: hidden;
       }
 
+      .promo-top {
+        margin: 10px 0 30px;
+      }
+
+      .promo-card {
+        display: grid;
+        grid-template-columns: minmax(240px, 360px) 1fr auto;
+        gap: 22px;
+        align-items: center;
+        padding: 22px;
+        border-radius: 22px;
+        background: linear-gradient(120deg, rgba(8, 23, 84, 0.95) 0%, rgba(5, 41, 122, 0.92) 55%, rgba(28, 66, 232, 0.86) 100%);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 20px 45px rgba(8, 23, 84, 0.25);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .promo-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(160px 120px at 85% 20%, rgba(240, 210, 36, 0.28), transparent 65%),
+          radial-gradient(240px 180px at 10% 90%, rgba(28, 168, 247, 0.25), transparent 70%);
+        pointer-events: none;
+      }
+
+      .promo-img {
+        width: 100%;
+        height: 160px;
+        border-radius: 16px;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .promo-text h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 32px;
+        letter-spacing: 1.2px;
+        margin-bottom: 6px;
+      }
+
+      .promo-text p {
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 16px;
+      }
+
+      .promo-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(240, 210, 36, 0.2);
+        color: #ffe38a;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .promo-btn {
+        background: var(--coppel-yellow);
+        color: #081754;
+        font-weight: 700;
+        padding: 12px 22px;
+        border-radius: 999px;
+        border: none;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      }
+
       .container {
         width: min(1140px, 92%);
         margin: 0 auto;
@@ -379,6 +452,19 @@
       }
 
       @media (max-width: 720px) {
+        .promo-card {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .promo-img {
+          height: 190px;
+        }
+
+        .promo-btn {
+          width: 100%;
+        }
+
         nav {
           display: none;
         }
@@ -459,6 +545,22 @@
                 <span>Campañas y ofertas destacadas</span>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section class="promo-top">
+          <div class="promo-card">
+            <img
+              class="promo-img"
+              src="https://fcogroup.sfo3.digitaloceanspaces.com/wp-content/uploads/lideresmexicanos/2026/03/04184913/og_portada-1024x536.jpg"
+              alt="Talent Land CDMX"
+            />
+            <div class="promo-text">
+              <div class="promo-chip">Talent Land CDMX</div>
+              <h3>Activa tu experiencia 2026</h3>
+              <p>Visita cada uno de los stands y gana premios.</p>
+            </div>
+            <a class="promo-btn" href="https://turexapp.s3.us-east-2.amazonaws.com/app-release.apk" download>IR</a>
           </div>
         </section>
 
